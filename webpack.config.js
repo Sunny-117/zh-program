@@ -1,3 +1,4 @@
+const { config } = require('./config')
 module.exports = {
     mode: "development",
     module: {
@@ -5,9 +6,7 @@ module.exports = {
             test: /index\.js$/,
             use: [{
                 loader: "./compile.js",
-                options: {
-                    changeVar: '变量'
-                }
+                options: config
             }]
         },
         ],
